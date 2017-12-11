@@ -1,0 +1,90 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f6f6f6;
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+
+input[type='checkbox'] {
+    cursor: pointer;
+}
+
+/* 定宽布局 */
+.w {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 全局 通用样式*/
+/* 隐藏*/
+.hide {
+    display: none;
+}
+
+/* 超链样式*/
+a.link {
+    color: #999;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #e80012;
+    text-decoration: none;
+
+}
+a:hover {
+    text-decoration: none;
+
+}
+
+.link-text {
+    color: #999;
+    text-decoration: none;
+}
+
+/* 按钮*/
+.btn {
+    font-size: 17px;
+    background: #c60023;
+    color: #ffffff;
+}
+
+.btn-mini {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+/* loading*/
+.loading {
+    display: block;
+    background: url(../../image/icon/loading.gif) no;
+    width: 65px;
+    height: 65px;
+    margin: 10px auto;
+    opacity: .6;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
