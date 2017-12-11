@@ -47,6 +47,10 @@ a.link {
     cursor: pointer;
     text-decoration: none;
 }
+.nav .user .link{
+    cursor: pointer;
+
+}
 
 .link:hover {
     color: #e80012;
@@ -87,4 +91,34 @@ a:hover {
     opacity: .6;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+
+
+.content.with-nav {
+    float: right;
+    width: 760px;
+}
+
+/* panel*/
+.panel{
+    padding:10px;
+    margin-bottom:10px;
+    background: #fff;
+    width: 760px;
+    float: right;
+}
+
+.panel .panel-title{
+    padding:10px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body {
+    padding:10px;
+    overflow: hidden;
+
 }

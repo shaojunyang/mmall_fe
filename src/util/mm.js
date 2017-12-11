@@ -17,14 +17,14 @@ var _mm = {
             dataType: param.type || 'json',
             data: param.data || ' ',
             success: function (res) {
-                if (0 === res.status) {
-                    //      如果 响应状态码是 0 、请求成功
+                if (0 == res.status) {
+                    //      如果 响应状态码是 0 、调用 success 方法
                     typeof param.success === 'function' && param.success(res.data, res.msg);
-                } else if (10 === res.status) {
+                } else if (10 == res.status) {
                     //     没有登录 响应强制登录
                     _this.doLogin();
-                } else if (1 === res.status) {
-                    //    请求数据、、参数 错误
+                } else if (1 == res.status) {
+                    //    如果响应状态码 == 1  、调用 error方法
                     typeof param.error === 'function' && param.error(res.msg);
                 }
             },
@@ -90,7 +90,7 @@ var _mm = {
     //     统一 强制登录处理
     doLogin: function () {
         // redirect 参数表示 从哪个链接强制登录、登录完成重新跳回之前的页面
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     //  跳回主业方法
     goHome: function () {

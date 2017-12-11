@@ -1,0 +1,17 @@
+/**
+ * author :  yangshaojun
+ * create time : 2017-12-11 23:57 
+ */
+
+.form-line{
+    height: 30px;
+    line-height:30px;
+    font-size: 18px;
+
+}
+
+.form-line .label{
+    width:60px;
+    display: inline-block;;
+    color: #000;
+}
