@@ -29,7 +29,7 @@ input[type='checkbox'] {
 
 /* 定宽布局 */
 .w {
-    width: 900px;
+    width: 1080px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -84,7 +84,7 @@ a:hover {
 /* loading*/
 .loading {
     display: block;
-    background: url(../../image/icon/loading.gif) no;
+    background: url(../../image/icon/loading.gif) no-repeat;
     width: 65px;
     height: 65px;
     margin: 10px auto;

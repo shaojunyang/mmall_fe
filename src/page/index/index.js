@@ -5,18 +5,28 @@
  * @Last Modified time: 2017-12-10 10:34:12
  */
 
-var __mm = require('util/mm.js');
-//
-// console.log("__mm:", __mm);
-//
-// var  a=__mm.getUrlParam('test');
-// console.log("a:" , a);
-// console.log(__mm.constructor.toString());
+var _mm = require('util/mm.js');
+require('./index.css');
+require('util/slider/index.js');
+require('page/common/header/index.js');
+require('page/common/nav/index.js');
+var navSide = require('page/common/nav-side/index.js');
 
- require('page/common/header/index.js');
- require('page/common/nav/index.js');
- var navSide =require('page/common/nav-side/index.js');
+//  模板
+var templateBanner = require('./banner.string');
 
- navSide.init({
-     name:'order-list'
- });
+$(function () {
+    //  渲染banner的html
+    var bannerHtml = _mm.renderHtml(templateBanner);
+    $('.banner-con').html(bannerHtml);
+    // 初始化 banner
+    var $slider = $('.banner').unslider({
+        dots: true
+    });
+//     前一张后遗症
+    $('.banner-con .banner-arrow').on('click', function () {
+        var forward = $(this).hasClass('prev') ? 'prev' : 'next';
+        $slider.data('unslider')[forward]();
+    })
+});
+

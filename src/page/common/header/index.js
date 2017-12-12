@@ -15,6 +15,7 @@ var _cart = require('service/cart-service.js');
 var header = {
     init: function () {
         this.bindEvent();
+        this.onLoad();
     },
     // 回填输入框信息
     onLoad: function () {
