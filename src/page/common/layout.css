@@ -105,8 +105,9 @@ a:hover {
     padding:10px;
     margin-bottom:10px;
     background: #fff;
-    width: 760px;
+    width: 875px;
     float: right;
+    margin-right: 70px;
 }
 
 .panel .panel-title{
