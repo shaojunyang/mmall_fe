@@ -13,6 +13,13 @@ var _mm = require('util/mm.js');
 $(function () {
     var type = _mm.getUrlParam('type') || 'default';
     var $element = $('.' + type + '-success');
+
+    if (type === 'payment') {
+        var orderNo = _mm.getUrlParam('orderNo');
+        var $orderNo = $element.find('.order-number');
+        $orderNo.attr('href', $orderNo.attr('href') + orderNo);
+    }
+
     // 显示对应的提示元素
     $element.show();
 })
