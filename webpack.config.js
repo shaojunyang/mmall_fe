@@ -26,6 +26,7 @@ var getHtmlConfig = function (filename, title) {
         template: './src/view/' + filename + '.html',//原始文件- 需要打包的文件路径
         filename: 'view/' + filename + '.html',// 目标文件的名称、路径 是 output 中配置的输出路径
         inject: true,
+        favicon: './favicon.ico',
         hash: true,
         title: title,
         // 需要打包的模块-  就是 entry中定义的入口文件 模块
@@ -39,6 +40,7 @@ var config = {
         'common': ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],
         'list': ['./src/page/list/index.js'],
+        'about': ['./src/page/about/index.js'],
         'payment': ['./src/page/payment/index.js'],
         'detail': ['./src/page/detail/index.js'],
         'cart': ['./src/page/cart/index.js'],
@@ -54,8 +56,8 @@ var config = {
         'result': ['./src/page/result/index.js']
     },
     output: {
-        path: './dist',
-        publicPath: '/dist',
+        path: __dirname + '/dist/',
+        publicPath: 'dev' == WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
         filename: 'js/[name].bundle.js'
     },
     externals: {
@@ -75,7 +77,11 @@ var config = {
             },
             {
                 test: /\.string$/,
-                loader: 'html-loader'
+                loader: 'html-loader',
+                query: {
+                    minimize: true,
+                    removeAttributeQuotes: false
+                }
             }
         ]
     },
@@ -104,6 +110,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('list', "商品列表")),
         new HtmlWebpackPlugin(getHtmlConfig('detail', "商品详情")),
         new HtmlWebpackPlugin(getHtmlConfig('cart', "购物车")),
+        new HtmlWebpackPlugin(getHtmlConfig('about', "关于我们")),
         new HtmlWebpackPlugin(getHtmlConfig('payment', "订单支付")),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', "订单确认")),
         new HtmlWebpackPlugin(getHtmlConfig('order-list', "订单列表")),
