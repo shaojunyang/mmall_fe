@@ -26,7 +26,7 @@ var getHtmlConfig = function (filename, title) {
         template: './src/view/' + filename + '.html',//原始文件- 需要打包的文件路径
         filename: 'view/' + filename + '.html',// 目标文件的名称、路径 是 output 中配置的输出路径
         inject: true,
-        favicon: './favicon.ico',
+        favicon: './favicon1.ico',
         hash: true,
         title: title,
         // 需要打包的模块-  就是 entry中定义的入口文件 模块
