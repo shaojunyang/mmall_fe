@@ -57,7 +57,7 @@ var config = {
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: 'dev' == WEBPACK_ENV ? '/dist/' : '//s.yangshaojun.com/mmall_fe/dist/',
+        publicPath: 'dev' == WEBPACK_ENV ? '/dist/' : '//s.yunhewanjia.com/mmall_fe/dist/',
         filename: 'js/[name].bundle.js'
     },
     externals: {
